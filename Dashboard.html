@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style2 copy.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img class='logo' src="images/logo2.png" alt="">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="profile.html">Profile</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='Dashboard.html'>Dashboard</a>
+                </li>
+                <li>
+                    <a href="index.html">Log Out</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <div id="content-fullwidth">
+
+                
+                <nav class="navbar navbar-expand-lg navbar-light navbar-custom navbar-inverse navbar-static-top">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="margin-left: 50px;">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        
+                       
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            
+                            <li class="nav-item">
+                                <button class="btn btn-secondary me-2" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
+                                  <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"/>
+                                </svg></i></button>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                            
+                                    <div class="dropdown dropleft">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-radioactive" viewBox="0 0 16 16">
+                                            <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z"/>
+                                            <path d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
+                                          </svg>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="index.html">Sign Out</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-secondary ms-2" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg></button>
+                              </li>
+                          </ul>
+                      </form>
+                    </div>
+                  </nav>
+
+            <!-- Chart 1  -->
+            <div class="container col-lg-12">
+                <div width="" height="100" >
+                  <canvas id="myChart" style="color: #FFA900;"></canvas>
+                </div>
+              </div>  
+
+              <div class="container-fluid">
+                <div class="row gx-3">
+                  <!-- Chart 2 -->
+                  <div class="col-xl-4 col-lg-12 buff h-100">
+                   <div class="p-3 border bg-light" width="100" height="20">
+                        <h3 class="card-category">Previous Months</h3>
+                        <h5 class="card-title">Trading Volume</h5>
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                  </div>
+                  <!-- End Chart  -->
+                  <!-- Chart 3 -->
+                  <div class="col-xl-4 col-lg-6 buff h-100 ">
+                    <div class="p-3 border bg-light chartBox">
+                        <h3 class="card-category">Token</h3>
+                        <h5 class="card-title">Distribution</h5>   
+                        <canvas id="myChart3"></canvas>                     
+                    </div>
+                  </div>
+                  <!-- End Chart  -->
+                  <div class="col-xl-4 col-lg-6 buff h-100">
+                    <div class="p-3 border bg-light  ">
+                        <h3 class="card-category">Token</h3>
+                        <h5 class="card-title" style="margin-bottom: 40px;">Exchange</h5>         
+                            <div class="exchange-rate buff2">
+                                <form   action="" >
+                                    
+                                    <div class="dropdown ">
+                                        <input type="text" style="word-wrap: break-word;" value="1.23547">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
+                                                <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
+                                              </svg>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">BTC</a>
+                                        <a class="dropdown-item" href="#">ETH</a>
+                                        <a class="dropdown-item" href="#">BNB</a>
+                                        </div>
+                                        </div>
+                            </div>
+                            <div>
+                               <h5 class='buff2' style="text-align: center; ">To</h5> 
+                            </div> 
+                            <div class="buff2">
+                                <form action="">
+                                    <input disabled="" type="text" value="$5,457">
+                                    <button type="button" class="btn btn-danger">Exc</button>
+                                </form>
+                            </div>
+                            <div class="buff2">
+                                
+                            </div>             
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-fluid">
+                <div class="row gx-3">
+                  <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 buff table-responsive">
+                   <div class="p-3 border bg-light">
+                    <h3 class="card-category">Recent</h3>
+                    <h4 class="card-title">Transaction</h4>
+                        <div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-sm text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                            <th>Amount</th>
+                                            <th>Tokens</th>
+                                            <th>Activity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>In Process</td>
+                                            <td>9/7/21</td>
+                                            <td>3.311</td>
+                                            <td>ETH</td>
+                                            <td>Deposit to your Balance</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paid</td>                                 
+                                            <td>9/2/21</td>
+                                            <td>0.86212</td>
+                                            <td>BTC</td>
+                                            <td>Tokens withdrawn</td>
+                                          </tr>
+                                          <tr>
+                                            <td>In Process</td>
+                                            <td>8/30/21</td>
+                                            <td>2.214</td>
+                                            <td>ETH</td>
+                                            <td>Referral Promo Bonus</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Pending</td>
+                                            <td>8/25/21</td>
+                                            <td>15478.23</td>
+                                            <td>CRO</td>
+                                            <td>Deposit to your Balance</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Paid</td>
+                                            <td>8/20/21</td>
+                                            <td>8.4511</td>
+                                            <td>ETH</td>
+                                            <td>Tokens Purchase</td>
+                                          </tr>
+                                    </tbody>
+                                </table>
+                              </div>
+                        </div>
+                   </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-12 col-md-12 h-100">
+                    <div class="p-3 border bg-light">
+                        <h3 class="card-category">Lastest</h3>
+                        <h4 class="card-title">News</h4>
+                        <div class="content" style="margin-bottom: 15px;" >
+                            <img src="images/ed (2).png" height="75px" width="75px">
+                                <div class="text">
+                                    <h3><strong>NFT</strong></h3>
+                                    <p>Explain crypto and NFTs like you are Ed, Edd and Eddy</p>
+                                </div>
+                        </div>
+                        <div class="content" >
+                            <img src="images/Uniswap.jpeg" height="75px" width="75px">
+                                <div class="text">
+                                    <h3><strong>Banned</strong></h3>
+                                    <p>Uniswap founder's bank account shut down by JP Morgan Chase, shadow-debanking allegations surface</p>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='script2.js'></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>
